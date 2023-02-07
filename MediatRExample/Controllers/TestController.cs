@@ -34,4 +34,13 @@ public class TestController : ControllerBase
         }
         return Ok(string.Join("\t\n", result));
     }
+
+    [HttpPost]
+    [Route("notification")]
+    public async Task<ActionResult> TestNotification()
+    {
+        var command = new TestNotificationRequest();
+        await mediator.Publish(command);
+        return Ok(true);
+    }
 }

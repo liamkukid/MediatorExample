@@ -1,8 +1,8 @@
-﻿global using System.Reflection;
-global using Microsoft.AspNetCore.Mvc;
+﻿global using Microsoft.AspNetCore.Mvc;
 global using System.Diagnostics;
+global using System.Reflection;
 
-global using MediatRExample.Commands;
+global using MediatRExample.Requests;
 
 global using MediatR;
 
