@@ -1,8 +1,8 @@
 ﻿namespace MediatRExample.Handlers;
 
-public class ExampleStreamRequestHandler : IStreamRequestHandler<ExampleStreamRequest, string>
+public class TestStreamRequestHandler : IStreamRequestHandler<TestStreamRequest, string>
 {
-    public async IAsyncEnumerable<string> Handle(ExampleStreamRequest request, CancellationToken cancellationToken)
+    public async IAsyncEnumerable<string> Handle(TestStreamRequest request, CancellationToken cancellationToken)
     {
         var random = new Random();
         for (int i = 1; i <= 10; i++)

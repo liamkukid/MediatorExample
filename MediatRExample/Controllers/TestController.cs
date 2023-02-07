@@ -2,29 +2,30 @@
 
 [ApiController]
 [Route("[controller]")]
-public class OrdersController : ControllerBase
+public class TestController : ControllerBase
 {
     private readonly IMediator mediator;
 
-    public OrdersController(IMediator mediator)
+    public TestController(IMediator mediator)
     {
         this.mediator = mediator;
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreateOrder()
+    [Route("request")]
+    public async Task<ActionResult> TestRequest()
     {
-        var command = new CreateOrderRequest();
+        var command = new TestRequest();
         var response = await mediator.Send(command);
         Debug.WriteLine(response);
-        return Ok();
+        return Ok(response);
     }
 
     [HttpPost]
     [Route("stream")]
-    public async Task<ActionResult> UseStream()
+    public async Task<ActionResult> TestStream()
     {
-        var command = new ExampleStreamRequest();
+        var command = new TestStreamRequest();
         var result = new List<string>();
         await foreach(var line in mediator.CreateStream(command))
         {
