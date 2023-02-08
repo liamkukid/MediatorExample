@@ -53,4 +53,14 @@ public class TestController : ControllerBase
         Debug.WriteLine(response);
         return Ok(response);
     }
+
+    [HttpPost]
+    [Route("InheritedTestRequest")]
+    public async Task<ActionResult> InheritedTestRequestExeption()
+    {
+        var command = new InheritedTestRequest(true);
+        var response = await mediator.Send(command);
+        Debug.WriteLine(response);
+        return Ok(response);
+    }
 }

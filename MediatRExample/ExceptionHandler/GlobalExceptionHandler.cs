@@ -1,6 +1,4 @@
-﻿using MediatR.Pipeline;
-
-namespace MediatRExample.ExceptionHandler;
+﻿namespace MediatRExample.ExceptionHandler;
 
 public class GlobalExceptionHandler : IRequestExceptionHandler<TestRequest, bool>
 {
