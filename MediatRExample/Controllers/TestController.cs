@@ -43,4 +43,14 @@ public class TestController : ControllerBase
         await mediator.Publish(command);
         return Ok(true);
     }
+
+    [HttpPost]
+    [Route("exception")]
+    public async Task<ActionResult> TestExeption()
+    {
+        var command = new TestRequest(true);
+        var response = await mediator.Send(command);
+        Debug.WriteLine(response);
+        return Ok(response);
+    }
 }
