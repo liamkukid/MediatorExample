@@ -2,9 +2,9 @@
 
 namespace MediatRExample.RequestExceptionAction;
 
-public class TestRequestExceptionAction : RequestExceptionAction<TestBaseRequest>
+public class TestRequestExceptionAction : IRequestExceptionAction<TestBaseRequest, TestException>
 {
-    protected override void Execute(TestBaseRequest request, Exception exception)
+    public async Task Execute(TestBaseRequest request, TestException exception, CancellationToken cancellationToken)
     {
         Debug.WriteLine($"Test request exception action works: {exception.Message}");
     }
