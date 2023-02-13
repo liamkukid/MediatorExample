@@ -48,7 +48,7 @@ public class TestController : ControllerBase
     [Route("exception")]
     public async Task<ActionResult> TestExeption()
     {
-        var command = new TestRequest(true);
+        var command = new TestRequest(callException: true);
         var response = await mediator.Send(command);
         Debug.WriteLine(response);
         return Ok(response);

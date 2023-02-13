@@ -6,7 +6,7 @@ public class TestRequestHandler : IRequestHandler<TestRequest, bool>
     {
         if (command.CallException)
             throw new TestException("request threw an exception");
-        Debug.WriteLine("TestRequest has been handled");
+        Debug.WriteLine(" --- TestRequest has been handled");
         return Task.FromResult(true);
     }
 }

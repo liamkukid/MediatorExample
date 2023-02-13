@@ -5,6 +5,6 @@ public class TestNotificationRequestHandler_1 :
 {
     public async Task Handle(TestNotificationRequest notification, CancellationToken cancellationToken)
     {
-        Debug.WriteLine("notification 1");
+        Debug.WriteLine(" --- notification 1");
     }
 }

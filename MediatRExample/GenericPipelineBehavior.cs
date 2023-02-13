@@ -5,9 +5,9 @@ public class GenericPipelineBehavior<TRequest, TResponse> : IPipelineBehavior<TR
 {
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
-        Debug.WriteLine("-- Handling Request");
+        Debug.WriteLine(" --- Handling Request");
         var response = await next();
-        Debug.WriteLine("-- Finished Request");
+        Debug.WriteLine(" --- Finished Request");
         return response;
     }
 }
