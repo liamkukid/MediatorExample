@@ -4,8 +4,14 @@ builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(RequestExceptionProcessorBehavior<,>));
-builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(RequestExceptionActionProcessorBehavior<,>));
+builder.Services.AddScoped(
+    typeof(IPipelineBehavior<,>), 
+    typeof(RequestExceptionProcessorBehavior<,>));
+
+builder.Services.AddScoped(
+    typeof(IPipelineBehavior<,>), 
+    typeof(RequestExceptionActionProcessorBehavior<,>));
+
 builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(GenericPipelineBehavior<,>));
 var app = builder.Build();
 
