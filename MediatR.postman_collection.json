@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "da9efafa-4763-455d-96b6-c9f8d7a77966",
+		"name": "MediatR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9785819"
+	},
+	"item": [
+		{
+			"name": "request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5064/test/request",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5064",
+					"path": [
+						"test",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exception",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5064/test/exception",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5064",
+					"path": [
+						"test",
+						"exception"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exception action",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5064/test/exception_action",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5064",
+					"path": [
+						"test",
+						"exception_action"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stream",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5064/test/stream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5064",
+					"path": [
+						"test",
+						"stream"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5064/test/notification",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5064",
+					"path": [
+						"test",
+						"notification"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
