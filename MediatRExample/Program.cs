@@ -12,7 +12,10 @@ builder.Services.AddScoped(
     typeof(IPipelineBehavior<,>), 
     typeof(RequestExceptionActionProcessorBehavior<,>));
 
-builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(GenericPipelineBehavior<,>));
+builder.Services.AddScoped(
+    typeof(IPipelineBehavior<,>), 
+    typeof(GenericPipelineBehavior<,>));
+
 var app = builder.Build();
 
 app.UseAuthorization();
