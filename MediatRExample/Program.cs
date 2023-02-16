@@ -15,12 +15,6 @@ builder.Services.AddScoped(
     typeof(RequestExceptionActionProcessorBehavior<,>));
 
 builder.Services.AddScoped(
-    typeof(IRequestPreProcessor<>), typeof(GenericRequestPreProcessor<>));
-
-builder.Services.AddScoped(
-    typeof(IRequestPostProcessor<,>), typeof(GenericRequestPostProcessor<,>));
-
-builder.Services.AddScoped(
     typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
 
 builder.Services.AddScoped(
