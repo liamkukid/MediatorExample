@@ -1,3 +1,5 @@
+using MediatRExample.PipelineBehavior;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
@@ -13,8 +15,16 @@ builder.Services.AddScoped(
     typeof(RequestExceptionActionProcessorBehavior<,>));
 
 builder.Services.AddScoped(
-    typeof(IPipelineBehavior<,>), 
-    typeof(GenericPipelineBehavior<,>));
+    typeof(IRequestPreProcessor<>), typeof(GenericRequestPreProcessor<>));
+
+builder.Services.AddScoped(
+    typeof(IRequestPostProcessor<,>), typeof(GenericRequestPostProcessor<,>));
+
+builder.Services.AddScoped(
+    typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
+
+builder.Services.AddScoped(
+    typeof(IPipelineBehavior<,>), typeof(GenericPipelineBehavior<,>));
 
 var app = builder.Build();
 

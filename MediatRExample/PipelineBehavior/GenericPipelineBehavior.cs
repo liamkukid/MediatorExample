@@ -1,4 +1,4 @@
-namespace MediatRExample;
+namespace MediatRExample.PipelineBehavior;
 
 public class GenericPipelineBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
