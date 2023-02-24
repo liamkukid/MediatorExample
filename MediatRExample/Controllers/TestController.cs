@@ -17,7 +17,6 @@ public class TestController : ControllerBase
     {
         var command = new TestRequest();
         var response = await mediator.Send(command);
-        Debug.WriteLine(response);
         return Ok(response);
     }
 

@@ -1,8 +1,9 @@
-using MediatRExample.PipelineBehavior;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssemblies(typeof(TestRequest).Assembly);
+});
 
 builder.Services.AddControllers();
 
